@@ -51,7 +51,7 @@ class init:
         self.v2 = dynatrace_workbench.v2.v2()
 
 
-    def get_dynatrace_headers(self, dynatrace_api_key, dynatrace_api_client):
+    def get_dynatrace_headers(self):
         headers = dict()
         headers['authorization'] = f'Api-Token {self.DYNATRACE_API_KEY_DATA}'
         headers['accept'] = f'application/json'
@@ -59,17 +59,16 @@ class init:
 
 
     def post_request(self, url, body):
-        return requests.post(url, body, headers=self.get_dynatrace_headers(self.DYNATRACE_API_KEY_DATA, self.DYNATRACE_CLIENT_DATA))
+        return requests.post(url, body, headers=self.get_dynatrace_headers())
 
 
     def get_request(self, url):
-        return requests.get(url, headers=self.get_dynatrace_headers(self.DYNATRACE_API_KEY_DATA, self.DYNATRACE_CLIENT_DATA))
+        return requests.get(url, headers=self.get_dynatrace_headers())
 
 
     def delete_request(self, url):
-        return requests.delete(url, headers=self.get_dynatrace_headers(self.DYNATRACE_API_KEY_DATA, self.DYNATRACE_CLIENT_DATA))
+        return requests.delete(url, headers=self.get_dynatrace_headers())
 
 
     def put_request(self, url, body):
-        return requests.put(url, body, headers=self.get_dynatrace_headers(self.DYNATRACE_API_KEY_DATA, self.DYNATRACE_CLIENT_DATA))
-
+        return requests.put(url, body, headers=self.get_dynatrace_headers())
