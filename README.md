@@ -1,2 +1,1 @@
-# dynatrace_plugin_workbench
-dynatrace_plugin_workbench
+# Dynatrace Plugin Workbench
