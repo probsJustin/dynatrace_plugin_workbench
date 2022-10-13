@@ -2,4 +2,4 @@ import dynatrace_workbench
 
 
 
-dynatrace_workbench.test()
+dynatrace_environment = dynatrace_workbench()
